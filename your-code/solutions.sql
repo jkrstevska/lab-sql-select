@@ -24,7 +24,6 @@ SELECT
 	a.au_id AS 'AUTHOR ID',
 	a.au_lname AS 'LAST NAME',
 	a.au_fname AS 'FIRST NAME',
-	t.title AS 'TITLE',
 	p.pub_name AS 'PUBLISHER',
 	COUNT(t.title_id) AS 'TITLE COUNT'
 FROM authors a
@@ -46,7 +45,6 @@ SELECT
 	a.au_lname AS 'LAST NAME',
 	a.au_fname AS 'FIRST NAME',
 	SUM(s.qty) AS 'TOTAL'
--- 	COUNT(t.title_id) AS 'TOTAL'
 FROM authors a
 JOIN titleauthor ta 
 	ON a.au_id = ta.au_id
